@@ -151,3 +151,40 @@ int main()
 o/p:
 Name : siva, age: 23, height:42.30
 Name : siva, age: 23, height:42.30
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Eg:
+#include <iostream>
+#include<stdio.h>
+#include<string.h>
+
+using namespace std;
+
+struct person
+{
+    int age;
+    char name[30];
+    float height;
+};
+void prnt(struct person* s)
+{
+    printf("Name: %s, age: %d, height:%.2f\n",s->name,s->age,s->height);
+}
+int main()
+{
+   struct person p1,p2;
+   p1.age=23;
+   p1.height=42.3;
+   strncpy(p1.name,"siva",sizeof(p1.name));
+   p1=p2; //using assignment
+   prnt(&p1);
+   prnt(&p2);
+
+    return 0;
+}
+
+o/p:
+Name : siva, age: 23, height:42.30
+Name : siva, age: 23, height:42.30
