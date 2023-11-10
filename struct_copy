@@ -1,6 +1,8 @@
 * WHAT'S THE BEST WAY TO COPY STRUCT IN C/C++:
   -------------------------------------------
-
+                                                    1st way: assign individual members from one object to another object(eg:p1.age=p2.age).
+                                                    2nd way: Assigning using memcpy(starting Address,value you need to assign,how.many bytes).
+                                                    3rd way:using assignment operator(eg.p1=p2).
 Eg1:
 #include<stdio.h>
 #include<stdlib.h>
