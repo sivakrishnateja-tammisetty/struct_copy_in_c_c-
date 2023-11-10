@@ -70,4 +70,47 @@ P2 Details:
 Name:siva
 Age :23
 Height :43.20
-  
+
+
+
+
+Eg3:
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct person
+{
+    int age;
+    char name[20];
+    float height;
+};
+int main()
+{
+    struct person p1,p2;
+    p1.age=23;
+    p1.height=43.2;
+    strncpy(p1.name,"siva",sizeof(p1.name));
+
+    //copying from p1 to p2 directly
+    memcpy(&p2,&p2,sizeof(p1));
+
+    printf("P1 Details:\n");
+    printf("Name:%s\n",p1.name);
+    printf("Age :%d\n",p1.age);
+    printf("Height :%.2f\n",p1.height);
+    printf("P2 Details:\n");
+    printf("Name:%s\n",p1.name);
+    printf("Age :%d\n",p1.age);
+    printf("Height :%.2f\n",p1.height);
+
+}
+
+o/p:
+P1 Details:
+Name:siva
+Age :23
+Height :43.20
+P2 Details:
+Name:siva
+Age :23
+Height :43.20
